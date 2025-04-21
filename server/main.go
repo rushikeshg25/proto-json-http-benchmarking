@@ -5,6 +5,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	u "server/pb"
 
 	"google.golang.org/protobuf/proto"
 )
@@ -30,7 +31,7 @@ func jsonHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func protoHandler(w http.ResponseWriter, r *http.Request) {
-	var user User
+	var user u.User
 	body, _ := io.ReadAll(r.Body)
 	err := proto.Unmarshal(body, &user)
 	if err != nil {

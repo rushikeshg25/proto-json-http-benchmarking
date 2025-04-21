@@ -1,8 +1,8 @@
 syntax="proto3";
 
-package protojson;
+package main;
 
-option go_package = "./";
+option go_package = "/pb";
 
 message User{
     int32 id = 1;
