@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package protojson;
+
+option go_package = "./";
+
+message User{
+    int32 id = 1;
+    string name = 2;
+    string email = 3;
+    bool isActive = 4;
+    float score = 5;
+}
